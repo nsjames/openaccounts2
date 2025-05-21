@@ -154,12 +154,12 @@ CONTRACT mycontract : public contract {
 
 
 	int64_t get_bancor_input( int64_t out_reserve, int64_t inp_reserve, int64_t out ){
-      const double ob = out_reserve;
-      const double ib = inp_reserve;
-      int64_t inp = (ib * out) / (ob - out);
-      if ( inp < 0 ) inp = 0;
-      return inp;
-   }
+        const double ob = out_reserve;
+        const double ib = inp_reserve;
+        int64_t inp = (ib * out) / (ob - out);
+        if ( inp < 0 ) inp = 0;
+        return inp;
+    }
 
     asset getRamCost(int64_t bytes, symbol sym) {
         ramMarket market(name("eosio"), name("eosio").value);
